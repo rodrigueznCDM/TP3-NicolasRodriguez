@@ -38,7 +38,7 @@ while hp > 0:
                        f"\n2- Contourner cet adversaire et aller ouvrir une autre porte"
                        f"\n3- Afficher les règles du jeu"
                        f"\n4- Quitter la partie\n\n"))
-
+    # message d'erreur
     try:
         if battle == 1:
             dice = random.randint(1, 6)
@@ -88,6 +88,8 @@ while hp > 0:
 
     except ValueError:
         print("\nEntrez un numéro.\n")
+        # on reutilise la variable
+        rules_seen = True
 
 print(f"\nVous êtes mort."
       f"\nVous avez vaincu {victories} monstre(s) en total.")
