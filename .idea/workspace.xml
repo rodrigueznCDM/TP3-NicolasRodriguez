@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99fa2619-873f-416c-a332-b512f117e46b" name="Changes" comment="">
+    <list default="true" id="99fa2619-873f-416c-a332-b512f117e46b" name="Changes" comment="periode terminé #1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -39,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/rodriguezn/MesDocuments/TP3 - Nicolas Rodriguez"
@@ -84,6 +85,19 @@
       <option name="presentableId" value="Default" />
       <updated>1726243139325</updated>
     </task>
+    <task id="LOCAL-00001" summary="periode terminé #1">
+      <option name="closed" value="true" />
+      <created>1727361957040</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727361957040</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="periode terminé #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="periode terminé #1" />
   </component>
 </project>

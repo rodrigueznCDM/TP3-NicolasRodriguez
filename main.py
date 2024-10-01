@@ -8,66 +8,86 @@ import random
 
 print("TP3 - Combat de Monstres\n")
 hp = 20
-num_ennemies = 0
-battle_result = "aucun"
+num_encounters = 0
+past_battle = "aucun"
 consecutive_victories = 0
 victories = 0
 defeats = 0
+rules_seen = False
 
 
 def monster_generate():
+    global rules_seen
     monster = random.randint(1, 5)
-    return monster
+
+    if not rules_seen:
+        return monster
+
+    elif rules_seen:
+        rules_seen = False
+        return previous_monster
 
 
 while hp > 0:
+    num_encounters += 1
     difficulty = monster_generate()
-    print(f"Vous tombez face à face avec un adversaire d'une difficulté de {difficulty}.")
-    num_ennemies += 1
-    battle = int(input("Que voulez-vous faire? :\n1- Combattre cet adversaire\n2- Contourner cet adversaire et aller ouvrir une autre porte\n3- Afficher les règles du jeu\n4- Quitter la partie"))
+    previous_monster = difficulty
+    print(f"\nVous tombez face à face avec un adversaire d'une difficulté de {difficulty}\n")
+    battle = int(input(f"Que voulez-vous faire? :"
+                       f"\n1- Combattre cet adversaire"
+                       f"\n2- Contourner cet adversaire et aller ouvrir une autre porte"
+                       f"\n3- Afficher les règles du jeu"
+                       f"\n4- Quitter la partie\n\n"))
 
     try:
         if battle == 1:
             dice = random.randint(1, 6)
-            print(f"Statu de la partie:"
-                  f"-Advesaire #{num_ennemies}"
-                  f"-Adversaire avec {difficulty} de force"
-                  f"-Vous avez {hp} de vie"
-                  f"-Combat #{num_ennemies} avec {victories} victoires et {defeats} défaites"
-                  f"\nVotre lancer: {dice}"
-                  f"\nRésultat de la dernière bataille: {battle_result}")
+            print(f"\nStatu de la partie:"
+                  f"\n- Advesaire #{num_encounters}"
+                  f"\n- Adversaire avec {difficulty} de force"
+                  f"\n- Vous avez {hp} point(s) de vie"
+                  f"\n- Combat #{num_encounters}: {victories} victoires et {defeats} défaites"
+                  f"\n- Résultat de la dernière bataille: {past_battle}"
+                  f"\n- Résultat de votre lancer: {dice}\n")
 
             if dice > difficulty:
                 victories += 1
-                battle_result = "Victoire"
+                consecutive_victories += 1
+                past_battle = "Victoire"
+                print(f"Victoire:"
+                      f"\n- Vous avez {hp} point(s) de vie"
+                      f"\n- Vous avez gagné {consecutive_victories} victoires consécutives\n")
 
             elif dice <= difficulty:
                 defeats += 1
+                consecutive_victories = 0
                 hp -= difficulty
-                battle_result = "Défaite"
-
-            print(f"Statu de la partie:"
-                  f"-Advesaire #{num_ennemies}"
-                  f"-Adversaire avec {difficulty} de force"
-                  f"-Vous avez {hp} de vie"
-                  f"-Combat #{num_ennemies} avec {victories} victoires et {defeats} défaites"
-                  f"\nVotre lancer: {dice}"
-                  f"\nRésultat de le bataille: {battle_result}")
+                past_battle = "Défaite"
+                print(f"Défaite:"
+                      f"\n- Vous avez {hp} point(s) de vie\n")
 
         elif battle == 2:
             hp -= 1
-            print("\nVous perdez 1 point de vie en vous échapant du monstre.\n")
+            print(f"\nVous perdez 1 point de vie en vous échapant du monstre."
+                  f"\nVous avez {hp} point(s) de vie\n")
 
         elif battle == 3:
-            print(f"\nPour réussir un combat, il faut que la valeur du dé lancé soit supérieure à la force de l’adversaire."
-                  f"Dans ce cas, le niveau de vie de l’usager est augmenté de la force de l’adversaire."
-                  f"Une défaite a lieu lorsque la valeur du dé lancé par l’usager est inférieure ou égale à la force de l’adversaire."
-                  f"Dans ce cas, le niveau de vie de l’usager est diminué de la force de l’adversaire.\n"
-                  f"La partie se termine lorsque les points de vie de l’usager tombent sous 0.\n"
-                  f"L’usager peut combattre ou éviter chaque adversaire, dans le cas de l’évitement, il y a une pénalité de 1 point de vie.\n")
+            rules_seen = True
+            print(f"\nPour réussir un combat, il faut que la valeur du dé lancé soit supérieure à la force de"
+                  f" l’adversaire."
+                  f"\nDans ce cas, le niveau de vie de l’usager est augmenté de la force de l’adversaire."
+                  f"\nUne défaite a lieu lorsque la valeur du dé lancé par l’usager est inférieure ou égale à la force"
+                  f" de l’adversaire."
+                  f"\nDans ce cas, le niveau de vie de l’usager est diminué de la force de l’adversaire.\n"
+                  f"\nLa partie se termine lorsque les points de vie de l’usager tombent sous 0.\n"
+                  f"\nL’usager peut combattre ou éviter chaque adversaire, dans le cas de l’évitement, il y a une"
+                  f" pénalité de 1 point de vie.\n")
 
         elif battle == 4:
-            exit("Merci et au revoir...")
+            exit("\nMerci et au revoir...")
 
     except ValueError:
-        print("\nEntrez un numéro.")
+        print("\nEntrez un numéro.\n")
+
+print(f"\nVous êtes mort."
+      f"\nVous avez vaincu {victories} monstre(s) en total.")
