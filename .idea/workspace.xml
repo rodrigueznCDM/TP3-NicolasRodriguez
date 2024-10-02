@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99fa2619-873f-416c-a332-b512f117e46b" name="Changes" comment="periode terminé #1">
+    <list default="true" id="99fa2619-873f-416c-a332-b512f117e46b" name="Changes" comment="periode terminé #2.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -37,14 +37,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/rodriguezn/MesDocuments/TP3 - Nicolas Rodriguez"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rodriguezn/MesDocuments/TP3 - Nicolas Rodriguez&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="TP3 - Nicolas Rodriguez" />
@@ -93,11 +93,29 @@
       <option name="project" value="LOCAL" />
       <updated>1727361957040</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="periode terminé #2">
+      <option name="closed" value="true" />
+      <created>1727808842094</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727808842094</updated>
+    </task>
+    <task id="LOCAL-00003" summary="periode terminé #2.1">
+      <option name="closed" value="true" />
+      <created>1727808972228</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727808972228</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="periode terminé #1" />
-    <option name="LAST_COMMIT_MESSAGE" value="periode terminé #1" />
+    <MESSAGE value="periode terminé #2" />
+    <MESSAGE value="periode terminé #2.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="periode terminé #2.1" />
   </component>
 </project>
