@@ -21,6 +21,7 @@ end_game = False
 def monster_generate():
     global skip_exploit_possible
     global boss_encountered
+
     # les monstres normaux seronts toujours plus faibles que le boss
     normal_monster = random.randint(1, 4)
     boss_monster = 5
@@ -29,6 +30,7 @@ def monster_generate():
     if not skip_exploit_possible:
 
         if boss_encountered:
+            boss_encountered = False
             return boss_monster
 
         elif not boss_encountered:
@@ -38,6 +40,7 @@ def monster_generate():
         skip_exploit_possible = False
 
         if boss_encountered:
+            boss_encountered = False
             return boss_monster
 
         elif not boss_encountered:
@@ -51,25 +54,25 @@ while not end_game:
         difficulty = 0
 
         # on s'assure que le boss n'apparait qu'une fois
-        if victories == 3 and not boss_encountered:
+        if victories == 3 or boss_encountered:
             boss_encountered = True
             enemy = "le boss"
-            difficulty = monster_generate()
-            print(f"\nVous tombez face à face avec le boss. C'est un monstre d'une difficulté de {difficulty}\n")
 
         else:
             enemy = "cet adversaire"
-            difficulty = monster_generate()
-            print(f"\nVous tombez face à face avec un adversaire d'une difficulté de {difficulty}\n")
-            previous_monster = difficulty
 
         # message d'erreur personnalisé
         try:
+            difficulty = monster_generate()
+            previous_monster = difficulty
+
+            print(f"\nVous tombez face à face avec {enemy}. {enemy} un monstre d'une difficulté de {difficulty}\n")
             battle = int(input(f"Que voulez-vous faire? :"
                                f"\n1- Combattre {enemy}"
                                f"\n2- Contourner {enemy} et aller ouvrir une autre porte"
                                f"\n3- Afficher les règles du jeu"
                                f"\n4- Quitter la partie\n\n"))
+
             if battle == 1:
                 dice = random.randint(1, 6)
                 print(f"\nStatu de la partie:"
@@ -99,14 +102,12 @@ while not end_game:
             elif battle == 2:
 
                 # s'assurer que le joueur se bat contre le boss
-                if not boss_encountered:
+                if enemy == "cet adversaire":
                     hp -= 1
                     print(f"\nVous perdez 1 point de vie en vous échapant du monstre."
                           f"\nVous avez {hp} point(s) de vie\n")
 
-                elif boss_encountered:
-                    # pour que le joueur rencontre le boss encore
-                    boss_encountered = False
+                elif enemy == "le boss":
                     print("\nVous ne pouvez pas contourner le boss\n")
 
             elif battle == 3:
@@ -120,6 +121,10 @@ while not end_game:
                       "\nLa partie se termine lorsque les points de vie de l’usager tombent sous 0.\n"
                       "\nL’usager peut combattre ou éviter chaque adversaire, dans le cas de l’évitement, il y a"
                       " une pénalité d'un point de vie.\n")
+
+                # pour que le joueur rencontre le boss encore s'il la rencontré avant
+                if enemy == "le boss":
+                    boss_encountered = True
 
             elif battle == 4:
                 exit("\nMerci et au revoir...")
