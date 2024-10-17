@@ -67,6 +67,11 @@ def battle_sequence():
     global enemy
 
     # on s'assure que le boss n'apparait qu'une fois par 3 victoires
+
+    #
+    # marche pas
+    #
+
     if victories / 3 is int and not boss_encountered:
         boss_encountered = True
         enemy = "le boss"
