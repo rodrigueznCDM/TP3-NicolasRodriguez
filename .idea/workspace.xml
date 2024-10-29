@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99fa2619-873f-416c-a332-b512f117e46b" name="Changes" comment="Fin de Période #5.1">
+    <list default="true" id="99fa2619-873f-416c-a332-b512f117e46b" name="Changes" comment="Fin de Période #6&#10;&#10;code overhul, not done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -133,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729196518098</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fin de Période #6&#10;&#10;code overhul, not done">
+      <option name="closed" value="true" />
+      <created>1729781211894</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729781211894</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +152,7 @@
     <MESSAGE value="txt changes" />
     <MESSAGE value="Fin de Période #5" />
     <MESSAGE value="Fin de Période #5.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fin de Période #5.1" />
+    <MESSAGE value="Fin de Période #6&#10;&#10;code overhul, not done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin de Période #6&#10;&#10;code overhul, not done" />
   </component>
 </project>
