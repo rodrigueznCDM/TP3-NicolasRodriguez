@@ -105,8 +105,8 @@ while hp > 0:
                             print("\nVous ne pouvez pas contourner le boss\n")
 
                     elif battle == 3:
-                        print("\nPour réussir un combat, il faut que la valeur du dé lancé soit supérieure à la"
-                              " force de l’adversaire."
+                        print("\nPour réussir un combat, il faut que la valeur des deux dés lancés soit supérieure
+                              "à la force de l’adversaire."
                               "\nSi on a plusieurs adversaires, on se bat avec le premier, puis le deuxième et"
                               " ainsi de suite."
                               "\nDans le cas d'une victoire, le niveau de vie de l’usager est augmenté de la force"
