@@ -105,19 +105,19 @@ while hp > 0:
                             print("\nVous ne pouvez pas contourner le boss\n")
 
                     elif battle == 3:
-                        print("\nPour réussir un combat, il faut que la valeur des deux dés lancés soit supérieure
-                              "à la force de l’adversaire."
+                        print("\nPour réussir un combat, il faut que la somme de la valeur des deux dés lancés"
+                              " soit supérieure à la force de l’adversaire."
                               "\nSi on a plusieurs adversaires, on se bat avec le premier, puis le deuxième et"
                               " ainsi de suite."
-                              "\nDans le cas d'une victoire, le niveau de vie de l’usager est augmenté de la force"
+                              "\nDans le cas d'une victoire, le niveau de vie de l’usager est augmenté par la force"
                               " de l’adversaire."
-                              "\nUne défaite a lieu lorsque la valeur du dé lancé par l’usager est inférieure ou"
-                              " égale à la force de l’adversaire."
-                              "\nDans ce cas, le niveau de vie de l’usager est diminué de la force de"
+                              "\nUne défaite a lieu lorsque la valeur de la somme des dés lancés par l’usager est"
+                              " inférieure ou égale à la force de l’adversaire."
+                              "\nDans ce cas, le niveau de vie de l’usager est diminué par la force de"
                               " l’adversaire.\n"
                               "\nLa partie se termine lorsque les points de vie de l’usager tombent sous 0.\n"
-                              "\nL’usager peut combattre ou éviter les adversaires, dans le cas de l’évitement,"
-                              " il y a une pénalité de 1 point de vie.\n")
+                              "\nL’usager peut aussi éviter les adversaires, dans ce cas, il y a une pénalité de"
+                              " 1 point de vie.\n")
 
                     elif battle == 4:
                         exit("\nMerci et au revoir...")
